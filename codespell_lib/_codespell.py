@@ -260,7 +260,7 @@ def parse_options(args):
                            'available; 3 applies both 1 and 2')
 
     parser.add_option('-q', '--quiet-level',
-                      action='store', type='int', default=0,
+                      action='store', type='int', default=2,
                       help='Bitmask that allows codespell to run quietly. '
                            '0: the default, in which all messages are '
                            'printed. 1: disable warnings about wrong '

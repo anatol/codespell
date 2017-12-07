@@ -248,7 +248,7 @@ def test_encoding():
         with open(f.name, 'wb') as f:
             f.write(b'\x00\x00naiive\x00\x00')
         with CaptureStdout() as sio:
-            assert_equal(cs.main(f.name), 0)
+            assert_equal(cs.main('-q', '0', f.name), 0)
         assert_true('WARNING: Binary file' in sio[1])
         with CaptureStdout() as sio:
             assert_equal(cs.main('-q', '2', f.name), 0)
